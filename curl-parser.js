@@ -1,3 +1,4 @@
+/* global parseCurl */
 Polymer({
   is: 'curl-parser',
   /**
@@ -24,7 +25,7 @@ Polymer({
   ],
 
   _commandChanged: function(command) {
-    var curlData = parse_curl(curl)
+    var curlData = parseCurl(command);
     this.fire('parsed', {
       data: curlData
     });
